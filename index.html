@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLAI Grips & Strings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .logo-box {
+            background-color: #ccff00;
+            color: #1e3c72;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: rotate(-2deg);
+        }
+        header h1 {
+            margin: 5px 0;
+            font-size: 36px;
+        }
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .category-title {
+            font-size: 28px;
+            color: #1e3c72;
+            border-bottom: 4px solid #ccff00;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e1e8ed;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .brand-badge {
+            background-color: #eef2f7;
+            color: #555;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin: 15px 15px 0 15px;
+        }
+        .product-info {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0 10px 0;
+            color: #222;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .price-box {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2a5298;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .buy-btn {
+            background-color: #ccff00;
+            color: #1e3c72;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            border: none;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .buy-btn:hover {
+            background-color: #b3e600;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            background-color: #1e3c72;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-box">🎾 OLAI</div>
+        <h1>Grips &amp; Strings</h1>
+        <p>Premium Tennis Gear &amp; Custom Installations</p>
+    </header>
+    <div class="container">
+        <h2 class="category-title">Premium Overgrips</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="brand-badge">Wilson</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Wilson Pro Overgrip</div>
+                        <div class="product-desc">The classic choice for pros. Super comfortable, smooth, and highly absorbent. Custom wrapped for you.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$5.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Wilson Pro Overgrip" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="brand-badge">Tourna Grip</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Tourna Grip (The Original)</div>
+                        <div class="product-desc">Famous dry feel that gets more grip the more you sweat. Excellent for hot summer days.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$5.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Tourna Grip" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="brand-badge">Yonex</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Yonex Super Grap</div>
+                        <div class="product-desc">Incredible tacky stickiness and great shock absorption. Long-lasting performance.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$5.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Yonex Super Grap" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" style="border: 2px solid #ccff00;">
+                <span class="brand-badge" style="background-color: #ccff00; color: #1e3c72;">OLAI Exclusive</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">OLAI Custom Tie-Dye Grip</div>
+                        <div class="product-desc">Hand-customized tie-dye and icon designs. Stand out on court with a grip that is uniquely yours!</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$8.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: OLAI Custom Tie-Dye Grip" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="category-title">Premium Tennis Strings</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="brand-badge">Luxilon</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Luxilon ALU Power</div>
+                        <div class="product-desc">The absolute #1 string on the pro tour. Maximum spin, control, and explosive power.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$35.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Luxilon ALU Power" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="brand-badge">Babolat</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Babolat RPM Blast</div>
+                        <div class="product-desc">Rafael Nadal's string of choice. Octagonal shape bites into the ball for massive heavy topspin.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$32.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Babolat RPM Blast" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="brand-badge">Solinco</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Solinco Hyper-G</div>
+                        <div class="product-desc">The famous neon green string. Known for its incredible tension hold, massive spin, and crisp feel.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$28.00</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Solinco Hyper-G" class="buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="brand-badge">Prince</span>
+                <div class="product-info">
+                    <div>
+                        <div class="product-name">Prince Synthetic Gut</div>
+                        <div class="product-desc">The best all-around string for comfort and value. Perfect for club players and rising juniors.</div>
+                    </div>
+                    <div>
+                        <div class="price-box">$22.00</div>
