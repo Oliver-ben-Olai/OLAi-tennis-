@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLAI Grips & Strings</title>
+    <title>OLAI Grips &amp; Strings</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,11 +12,34 @@
             background-color: #f4f7f6;
             color: #333;
         }
+        /* Fixed Sponsorship Banner in Top Right */
+        .sponsor-banner {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: #ccff00;
+            color: #1e3c72;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-width: 250px;
+            border: 2px solid #1e3c72;
+            line-height: 1.3;
+        }
+        .sponsor-banner a {
+            color: #1e3c72;
+            text-decoration: underline;
+            display: block;
+            margin-top: 4px;
+        }
         header {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .logo-box {
@@ -129,6 +152,38 @@
         .buy-btn:hover {
             background-color: #b3e600;
         }
+        .custom-request-box {
+            background: #ffffff;
+            border: 3px dashed #1e3c72;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .custom-request-box h3 {
+            font-size: 24px;
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        .custom-request-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .custom-btn {
+            background-color: #1e3c72;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+        .custom-btn:hover {
+            background-color: #2a5298;
+        }
         footer {
             text-align: center;
             padding: 40px;
@@ -137,15 +192,36 @@
             color: white;
             font-size: 14px;
         }
+        /* Mobile adjustment for fixed banner */
+        @media (max-width: 600px) {
+            .sponsor-banner {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 10px auto;
+                max-width: 90%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Sponsorship Tag in Corner -->
+    <div class="sponsor-banner">
+        📢 We sponsor top juniors &amp; pro players! If interested, 
+        <a href="mailto:oliver.laycob@://icloud.com Inquiry">email Oliver</a>
+    </div>
+
     <header>
         <div class="logo-box">🎾 OLAI</div>
-        <h1>Grips &amp; Strings</h1>
-        <p>Premium Tennis Gear &amp; Custom Installations</p>
+        <h1>Grips, Strings &amp; Gear</h1>
+        <p>Premium Tennis Equipment &amp; Custom Services</p>
     </header>
+
     <div class="container">
+
+        <!-- CATEGORY 1: GRIPS -->
         <h2 class="category-title">Premium Overgrips</h2>
         <div class="product-grid">
             <div class="product-card">
@@ -175,15 +251,15 @@
                 </div>
             </div>
             <div class="product-card">
-                <span class="brand-badge">Yonex</span>
+                <span class="brand-badge">Diadem</span>
                 <div class="product-info">
                     <div>
-                        <div class="product-name">Yonex Super Grap</div>
-                        <div class="product-desc">Incredible tacky stickiness and great shock absorption. Long-lasting performance.</div>
+                        <div class="product-name">Diadem Pro Feel Overgrip</div>
+                        <div class="product-desc">Offers a superb long-lasting tacky feel with ultimate moisture absorption for high-performance play.</div>
                     </div>
                     <div>
-                        <div class="price-box">$5.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Yonex Super Grap" class="buy-btn">Buy Now</a>
+                        <div class="price-box">$5.50</div>
+                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Diadem Pro Feel Overgrip" class="buy-btn">Buy Now</a>
                     </div>
                 </div>
             </div>
@@ -201,6 +277,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- CATEGORY 2: STRINGS -->
         <h2 class="category-title">Premium Tennis Strings</h2>
         <div class="product-grid">
             <div class="product-card">
@@ -208,46 +286,4 @@
                 <div class="product-info">
                     <div>
                         <div class="product-name">Luxilon ALU Power</div>
-                        <div class="product-desc">The absolute #1 string on the pro tour. Maximum spin, control, and explosive power.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$35.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Luxilon ALU Power" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <span class="brand-badge">Babolat</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Babolat RPM Blast</div>
-                        <div class="product-desc">Rafael Nadal's string of choice. Octagonal shape bites into the ball for massive heavy topspin.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$32.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Babolat RPM Blast" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <span class="brand-badge">Solinco</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Solinco Hyper-G</div>
-                        <div class="product-desc">The famous neon green string. Known for its incredible tension hold, massive spin, and crisp feel.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$28.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Solinco Hyper-G" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <span class="brand-badge">Prince</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Prince Synthetic Gut</div>
-                        <div class="product-desc">The best all-around string for comfort and value. Perfect for club players and rising juniors.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$22.00</div>
+
