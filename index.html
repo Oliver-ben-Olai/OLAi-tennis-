@@ -1,289 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLAI Grips &amp; Strings</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Olai Tennis Shop</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-        /* Fixed Sponsorship Banner in Top Right */
-        .sponsor-banner {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background-color: #ccff00;
-            color: #1e3c72;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 13px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
-            max-width: 250px;
-            border: 2px solid #1e3c72;
-            line-height: 1.3;
-        }
-        .sponsor-banner a {
-            color: #1e3c72;
-            text-decoration: underline;
-            display: block;
-            margin-top: 4px;
-        }
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .logo-box {
-            background-color: #ccff00;
-            color: #1e3c72;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 28px;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transform: rotate(-2deg);
-        }
-        header h1 {
-            margin: 5px 0;
-            font-size: 36px;
-        }
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .category-title {
-            font-size: 28px;
-            color: #1e3c72;
-            border-bottom: 4px solid #ccff00;
-            padding-bottom: 10px;
-            margin-top: 50px;
-            margin-bottom: 25px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e1e8ed;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-        .brand-badge {
-            background-color: #eef2f7;
-            color: #555;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 4px;
-            align-self: flex-start;
-            margin: 15px 15px 0 15px;
-        }
-        .product-info {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .product-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 5px 0 10px 0;
-            color: #222;
-        }
-        .product-desc {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-        .price-box {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2a5298;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .buy-btn {
-            background-color: #ccff00;
-            color: #1e3c72;
-            text-align: center;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.2s;
-            cursor: pointer;
-            border: none;
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-        .buy-btn:hover {
-            background-color: #b3e600;
-        }
-        .custom-request-box {
-            background: #ffffff;
-            border: 3px dashed #1e3c72;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 50px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .custom-request-box h3 {
-            font-size: 24px;
-            color: #1e3c72;
-            margin-top: 0;
-        }
-        .custom-request-box p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .custom-btn {
-            background-color: #1e3c72;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.2s;
-        }
-        .custom-btn:hover {
-            background-color: #2a5298;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            margin-top: 60px;
-            background-color: #1e3c72;
-            color: white;
-            font-size: 14px;
-        }
-        /* Mobile adjustment for fixed banner */
-        @media (max-width: 600px) {
-            .sponsor-banner {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin: 10px auto;
-                max-width: 90%;
-                text-align: center;
-            }
-        }
+        :root { --primary: #00FF66; --dark: #111111; --light: #f4f4f4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background-color: var(--light); color: #333; line-height: 1.4; }
+        .promo-banner { background-color: var(--dark); color: white; text-align: center; padding: 12px; font-weight: 600; font-size: 14px; }
+        .promo-banner a { color: var(--primary); text-decoration: underline; margin-left: 5px; }
+        header { background-color: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 28px; font-weight: 800; color: var(--dark); } .logo span { color: var(--primary); }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 22px; margin: 40px 0 15px 0; text-transform: uppercase; border-left: 5px solid var(--primary); padding-left: 10px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .product-image { height: 180px; background-color: #eee; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+        .product-info { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .brand-tag { font-size: 10px; text-transform: uppercase; color: #888; font-weight: 700; }
+        .product-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .price-label { font-size: 11px; color: #666; display: block; margin-top: 10px; }
+        .product-price { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+        .buy-btn { display: block; text-align: center; background-color: var(--dark); color: white; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+        .buy-btn:hover { color: var(--primary); }
+        footer { background-color: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 18px; font-weight: 600; }
+        footer a { color: var(--primary); text-decoration: underline; }
     </style>
 </head>
 <body>
-
-    <!-- Sponsorship Tag in Corner -->
-    <div class="sponsor-banner">
-        📢 We sponsor top juniors &amp; pro players! If interested, 
-        <a href="mailto:oliver.laycob@://icloud.com Inquiry">email Oliver</a>
-    </div>
-
-    <header>
-        <div class="logo-box">🎾 OLAI</div>
-        <h1>Grips, Strings &amp; Gear</h1>
-        <p>Premium Tennis Equipment &amp; Custom Services</p>
-    </header>
-
+    <div class="promo-banner">We sponsor top juniors and pro players! <a href="mailto:oliver.laycob@://icloud.com">Email oliver.laycob@icloud.com if you are interested.</a></div>
+    <header><div class="logo">OLAI<span>.</span></div></header>
     <div class="container">
-
-        <!-- CATEGORY 1: GRIPS -->
-        <h2 class="category-title">Premium Overgrips</h2>
+        <h2 class="section-title">Tennis Rackets</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <span class="brand-badge">Wilson</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Wilson Pro Overgrip</div>
-                        <div class="product-desc">The classic choice for pros. Super comfortable, smooth, and highly absorbent. Custom wrapped for you.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$5.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Wilson Pro Overgrip" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <span class="brand-badge">Tourna Grip</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Tourna Grip (The Original)</div>
-                        <div class="product-desc">Famous dry feel that gets more grip the more you sweat. Excellent for hot summer days.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$5.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Tourna Grip" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <span class="brand-badge">Diadem</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Diadem Pro Feel Overgrip</div>
-                        <div class="product-desc">Offers a superb long-lasting tacky feel with ultimate moisture absorption for high-performance play.</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$5.50</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: Diadem Pro Feel Overgrip" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card" style="border: 2px solid #ccff00;">
-                <span class="brand-badge" style="background-color: #ccff00; color: #1e3c72;">OLAI Exclusive</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">OLAI Custom Tie-Dye Grip</div>
-                        <div class="product-desc">Hand-customized tie-dye and icon designs. Stand out on court with a grip that is uniquely yours!</div>
-                    </div>
-                    <div>
-                        <div class="price-box">$8.00</div>
-                        <a href="mailto:oliver.laycob@://icloud.com Inquiry: OLAI Custom Tie-Dye Grip" class="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Elevate FS 98</div></div><div><span class="price-label">Price</span><div class="product-price">$219.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Babolat</div><div class="product-name">Pure Aero</div></div><div><span class="price-label">Price</span><div class="product-price">$259.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Wilson</div><div class="product-name">Blade 98 V9</div></div><div><span class="price-label">Price</span><div class="product-price">$249.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Head</div><div class="product-name">Speed MP 2024</div></div><div><span class="price-label">Price</span><div class="product-price">$269.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Yonex</div><div class="product-name">Ezone 98</div></div><div><span class="price-label">Price</span><div class="product-price">$259.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🎾</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Nova 100</div></div><div><span class="price-label">Price</span><div class="product-price">$209.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+        </div>
+                <h2 class="section-title">Court Shoes</h2>
+        <div class="product-grid">
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Court Burst Men's</div></div><div><span class="price-label">Price</span><div class="product-price">$139.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Babolat</div><div class="product-name">Propulse Fury 3</div></div><div><span class="price-label">Price</span><div class="product-price">$149.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Asics</div><div class="product-name">Gel Resolution 9</div></div><div><span class="price-label">Price</span><div class="product-price">$150.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Nike</div><div class="product-name">Air Zoom Vapor</div></div><div><span class="price-label">Price</span><div class="product-price">$160.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Adidas</div><div class="product-name">Barricade 13</div></div><div><span class="price-label">Price</span><div class="product-price">$140.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">👟</div><div class="product-info"><div><div class="brand-tag">Head</div><div class="product-name">Revolt Pro 4.5</div></div><div><span class="price-label">Price</span><div class="product-price">$135.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
         </div>
 
-        <!-- CATEGORY 2: STRINGS -->
-        <h2 class="category-title">Premium Tennis Strings</h2>
+        <h2 class="section-title">Strings</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <span class="brand-badge">Luxilon</span>
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">Luxilon ALU Power</div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Solstice Power Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$185.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Babolat</div><div class="product-name">RPM Blast Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$299.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Luxilon</div><div class="product-name">Alu Power Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$319.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Solinco</div><div class="product-name">Hyper-G Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$175.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Yonex</div><div class="product-name">Poly Tour Pro Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$190.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🧵</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Flash Teal Reel</div></div><div><span class="price-label">Price</span><div class="product-price">$175.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+        </div>
+        html        <h2 class="section-title">Grips</h2>
+        <div class="product-grid">
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Pro Feel Overgrip</div></div><div><span class="price-label">Price</span><div class="product-price">$45.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Yonex</div><div class="product-name">Super Grap 30-Pk</div></div><div><span class="price-label">Price</span><div class="product-price">$55.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Wilson</div><div class="product-name">Pro Overgrip 30-Pk</div></div><div><span class="price-label">Price</span><div class="product-price">$52.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Tourna</div><div class="product-name">Tourna Grip XL</div></div><div><span class="price-label">Price</span><div class="product-price">$49.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Babolat</div><div class="product-name">Vs Original 30-Pk</div></div><div><span class="price-label">Price</span><div class="product-price">$59.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🏷️</div><div class="product-info"><div><div class="brand-tag">Head</div><div class="product-name">Prime Overgrip</div></div><div><span class="price-label">Price</span><div class="product-price">$48.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+        </div>
 
+        <h2 class="section-title">Tennis Balls</h2>
+        <div class="product-grid">
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Wilson</div><div class="product-name">US Open Case</div></div><div><span class="price-label">Price</span><div class="product-price">$98.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Penn</div><div class="product-name">Tour Extra Case</div></div><div><span class="price-label">Price</span><div class="product-price">$95.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Diadem</div><div class="product-name">Premier Extra Case</div></div><div><span class="price-label">Price</span><div class="product-price">$95.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Dunlop</div><div class="product-name">Grand Prix Case</div></div><div><span class="price-label">Price</span><div class="product-price">$99.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Technifibre</div><div class="product-name">X-One Case</div></div><div><span class="price-label">Price</span><div class="product-price">$115.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+            <div class="product-card"><div class="product-image">🟢</div><div class="product-info"><div><div class="brand-tag">Babolat</div><div class="product-name">Team Court Case</div></div><div><span class="price-label">Price</span><div class="product-price">$96.00</div><a href="mailto:oliver.laycob@://icloud.com" class="buy-btn">Buy Now</a></div></div></div>
+        </div>
+    </div>
+    <footer>If you want something different, please <a href="mailto:oliver.laycob@://icloud.com">email oliver.laycob@icloud.com</a></footer>
+</body>
+</html>
